@@ -3,38 +3,20 @@
 This project provisions a **production-ready Amazon EKS cluster** using Terraform.  
 We build the cluster step by step, covering IAM roles, networking, node groups, and outputs.
 
----
-
-## Kubernetes Architecture
-![Kubernetes Architecture](../images/07_01_EKS_Cluster.png)
-
----
-
-## AWS EKS Cluster Architecture
-![AWS EKS Cluster Architecture](../images/07_02_EKS_Cluster.png)
-
----
-
-## Terraform Remote State Datasource for VPC and EKS Cluster Terraform Projects 
-- Sharing data across Terraform projects
-![Terraform Remote State Datasource for VPC and EKS Cluster](../images/07_03_EKS_Cluster.png)
-
----
-
 ## Step-01: Project Structure
 
 | File | Description |
 |------|-------------|
-| `c1_versions.tf` | Required Terraform + AWS provider versions |
-| `c2_variables.tf` | Input variables (region, cluster name, etc.) |
-| `c3_remote-state.tf` | Remote backend for Terraform state (S3 + DynamoDB) |
-| `c4_datasources_and_locals.tf` | AWS data sources and local values |
-| `c5_eks_tags.tf` | Common tags for resources |
-| `c6_eks_cluster_iamrole.tf` | IAM role for EKS control plane |
-| `c7_eks_cluster.tf` | EKS cluster resource definition |
-| `c8_eks_nodegroup_iamrole.tf` | IAM role for EKS worker node groups |
-| `c9_eks_nodegroup_private.tf` | Private node group configuration |
-| `c10_eks_outputs.tf` | Useful Terraform outputs (kubeconfig, cluster details) |
+| `1_versions.tf` | Required Terraform + AWS provider versions |
+| `2_variables.tf` | Input variables (region, cluster name, etc.) |
+| `3_remote-state.tf` | Remote backend for Terraform state (S3 + DynamoDB) |
+| `4_datasources_and_locals.tf` | AWS data sources and local values |
+| `5_eks_tags.tf` | Common tags for resources |
+| `6_eks_cluster_iamrole.tf` | IAM role for EKS control plane |
+| `7_eks_cluster.tf` | EKS cluster resource definition |
+| `8_eks_nodegroup_iamrole.tf` | IAM role for EKS worker node groups |
+| `9_eks_nodegroup_private.tf` | Private node group configuration |
+| `10_eks_outputs.tf` | Useful Terraform outputs (kubeconfig, cluster details) |
 
 ---
 
